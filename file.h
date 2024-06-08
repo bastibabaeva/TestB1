@@ -2,8 +2,10 @@
 #define FILE_H
 #include <QFileSystemWatcher>
 #include <QString>
+#include <QFile>
+#include <QFileInfo>
 
-class File: public QFileSystemWatcher
+class File:
 {
     QString nameOfFile;
     qint32 sizeOfFile;
@@ -11,10 +13,11 @@ class File: public QFileSystemWatcher
     bool existOfFile;
 public:
     File();
-    void getNameOfFile(QString nameOfFile);
-    void getSizeOfFile(QString nameOfFile);
-    void getPathOfFile(QString nameOfFile);
-    bool getExistOfFile(QString nameOfFile);
-    update();
+    //File();
+    QString getNameOfFile(){return nameOfFile;}
+    qint32 getSizeOfFile(){return sizeOfFile;}
+    QString getPathOfFile(){return pathOfFile;}
+    bool getExistOfFile(){return existOfFile;}
+    void update();
 };
 #endif // FILE_H
