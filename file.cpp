@@ -8,9 +8,18 @@ File::File()
     this->pathOfFile=QString("",this);
     this->existOfFile = false;
 }
-File::update()
+File::File(const QString &path)
 {
     QFileInfo infOfFile(path);
+    this->nameOfFile=infOfFile.fileName();
+    this->pathOfFile=infOfFile.filePath();
+    this->sizeOfFile=infOfFile.size();
+    this->existOfFile=infOfFile.exists();
+
+}
+File::update()
+{
+    QFileInfo infOfFile(pathOfFile);
     existOfFile=infOfFile.exists();
     sizeOfFile=infOfFile.size();
 }

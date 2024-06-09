@@ -13,7 +13,7 @@ class File:
     bool existOfFile;
 public:
     File();
-    //File();
+    File(const QString &path);
     QString getNameOfFile(){return nameOfFile;}
     qint32 getSizeOfFile(){return sizeOfFile;}
     QString getPathOfFile(){return pathOfFile;}
