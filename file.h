@@ -5,7 +5,7 @@
 #include <QFile>
 #include <QFileInfo>
 
-class File:
+class File
 {
     QString nameOfFile;
     qint32 sizeOfFile;
