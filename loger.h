@@ -4,5 +4,11 @@
 #include <QString>
 #include <QObject>
 
-class Loger{};
+class Loger: public QObject
+{
+    Q_OBJECT
+
+public slots:
+    virtual void logMessage(const QString &message)=0;
+};
 #endif // LOGER_H
