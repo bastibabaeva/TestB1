@@ -15,8 +15,7 @@ private:
 public:
     fileManeger(Loger *loger);
     void addFile(const QString &pathOfFile);
-    void checkFile();
-    void checkFileChanges();
+    void checkFileChanges(const QString &currentFile, File &oldFile);
 signals:
     void logSignal(const QString &str);
 
